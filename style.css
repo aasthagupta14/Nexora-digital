@@ -66,7 +66,24 @@ body {
 .nav-links a:hover {
     opacity: 0.7;
 }
-/* HEADINGS */
+@media(max-width: 480px){
+
+    .navbar ul {
+        gap: 8px;
+    }
+
+    .navbar ul li a {
+        font-size: 11px;
+    }
+
+    .logo img {
+        height: 38px;
+    }
+
+    .hero {
+        margin-top: 100px;
+    }
+}
 h2 {
     font-size: 34px;
     margin-bottom: 30px;
