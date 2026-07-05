@@ -1,0 +1,2124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'DM Sans', sans-serif;
+
+    background: #f2eee7;
+
+    color: #211f1c;
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.content-hero {
+    min-height: 100vh;
+
+    padding: 30px 6% 45px;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(255, 188, 148, 0.3),
+            transparent 30%
+        ),
+        #ded7cc;
+
+    overflow: hidden;
+}
+
+
+.studio-nav {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid rgba(33, 31, 28, 0.18);
+}
+
+
+.studio-nav span {
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.studio-nav a {
+    color: #211f1c;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.3px;
+}
+
+
+.hero-studio {
+    max-width: 1180px;
+
+    min-height: 650px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.9fr)
+        minmax(0, 1.1fr);
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+/* HERO COPY */
+
+.studio-label {
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: #9a4f38;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.hero-copy h1 {
+    max-width: 560px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(58px, 7vw, 95px);
+
+    font-weight: 600;
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+}
+
+
+.hero-copy h1 em {
+    color: #a54f35;
+}
+
+
+.hero-copy > p {
+    max-width: 480px;
+
+    margin-top: 30px;
+
+    color: #625d56;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+.hero-note {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-top: 35px;
+}
+
+
+.hero-note > span {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #211f1c;
+
+    color: #f2eee7;
+}
+
+
+.hero-note p {
+    color: #625d56;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 13px;
+
+    font-style: italic;
+}
+
+
+/* =====================================
+   CREATIVE BOARD
+===================================== */
+
+.creative-board {
+    position: relative;
+
+    min-height: 510px;
+
+    background: #b7aa99;
+
+    border: 14px solid #766757;
+
+    box-shadow:
+        20px 25px 0 rgba(33, 31, 28, 0.12);
+}
+
+
+.board-paper {
+    position: absolute;
+
+    width: 180px;
+
+    padding: 25px 20px;
+
+    background: #f8f4ec;
+
+    box-shadow:
+        0 10px 25px rgba(33, 31, 28, 0.15);
+}
+
+
+.board-paper small {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #9a4f38;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.board-paper strong {
+    display: block;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 19px;
+}
+
+
+.board-paper span {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #766f67;
+
+    font-size: 11px;
+
+    font-style: italic;
+}
+
+
+.paper-one {
+    top: 50px;
+
+    left: 45px;
+
+    transform: rotate(-7deg);
+}
+
+
+.paper-two {
+    top: 200px;
+
+    right: 50px;
+
+    transform: rotate(5deg);
+}
+
+
+.paper-three {
+    bottom: 45px;
+
+    left: 80px;
+
+    transform: rotate(3deg);
+}
+
+
+.board-sticker {
+    position: absolute;
+
+    top: 45px;
+
+    right: 35px;
+
+    width: 125px;
+    height: 125px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #a54f35;
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    letter-spacing: 1px;
+
+    transform: rotate(9deg);
+}
+
+
+.board-line {
+    position: absolute;
+
+    height: 2px;
+
+    background: rgba(33, 31, 28, 0.35);
+
+    transform-origin: left;
+}
+
+
+.line-one {
+    width: 150px;
+
+    top: 190px;
+
+    left: 180px;
+
+    transform: rotate(20deg);
+}
+
+
+.line-two {
+    width: 120px;
+
+    bottom: 180px;
+
+    left: 210px;
+
+    transform: rotate(-20deg);
+}
+
+
+/* SCROLL */
+
+.scroll-message {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.scroll-message span {
+    width: 45px;
+
+    height: 1px;
+
+    background: rgba(33, 31, 28, 0.3);
+}
+
+
+/* =====================================
+   CONTENT
+===================================== */
+
+.content-container {
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 100px 25px;
+}
+
+
+.scene-name {
+    margin-bottom: 30px;
+
+    color: #a54f35;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+}
+
+
+.desk-intro h2 {
+    max-width: 700px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 52px;
+
+    line-height: 1.05;
+}
+
+
+.desk-intro h2 em {
+    color: #a54f35;
+}
+
+
+.desk-intro > p {
+    margin-top: 12px;
+
+    color: #766f67;
+
+    font-size: 18px;
+}
+
+
+/* CHAOS BOARD */
+
+.chaos-board {
+    margin-top: 50px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+
+.chaos-item {
+    padding: 25px;
+
+    background: #e5ded4;
+
+    border-left: 3px solid #a54f35;
+}
+
+
+.chaos-item span {
+    color: #9a4f38;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.chaos-item p {
+    margin-top: 10px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 20px;
+}
+
+
+.chaos-result {
+    grid-column: 1 / -1;
+
+    padding: 30px;
+
+    background: #211f1c;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+.chaos-result span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #d8a38f;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.chaos-result strong {
+    font-size: 16px;
+
+    letter-spacing: 3px;
+}
+
+
+/* TRUTH */
+
+.desk-truth {
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 45px;
+
+    padding: 35px;
+
+    border-top: 1px solid #c9c0b4;
+
+    border-bottom: 1px solid #c9c0b4;
+}
+
+
+.truth-mark {
+    color: #a54f35;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 75px;
+
+    line-height: 0.8;
+}
+
+
+.desk-truth p {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 22px;
+
+    line-height: 1.6;
+}
+
+
+.desk-truth strong {
+    color: #a54f35;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 850px) {
+
+    .hero-studio {
+        grid-template-columns: 1fr;
+
+        padding: 80px 0;
+
+        gap: 55px;
+    }
+
+
+    .hero-copy {
+        text-align: center;
+    }
+
+
+    .hero-copy h1,
+    .hero-copy > p {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .hero-note {
+        justify-content: center;
+    }
+
+
+    .creative-board {
+        max-width: 600px;
+
+        width: 100%;
+
+        margin: auto;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .content-hero {
+        padding: 25px 20px 40px;
+    }
+
+
+    .studio-nav span {
+        font-size: 8px;
+    }
+
+
+    .studio-nav a {
+        font-size: 7px;
+    }
+
+
+    .hero-copy h1 {
+        font-size: 55px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .creative-board {
+        min-height: 500px;
+
+        border-width: 9px;
+    }
+
+
+    .board-paper {
+        width: 150px;
+
+        padding: 20px 15px;
+    }
+
+
+    .paper-one {
+        left: 20px;
+    }
+
+
+    .paper-two {
+        right: 20px;
+    }
+
+
+    .paper-three {
+        left: 35px;
+    }
+
+
+    .board-sticker {
+        width: 100px;
+
+        height: 100px;
+
+        right: 15px;
+
+        font-size: 9px;
+    }
+
+
+    .board-line {
+        display: none;
+    }
+
+
+    .content-container {
+        padding: 70px 20px;
+    }
+
+
+    .desk-intro h2 {
+        font-size: 38px;
+    }
+
+
+    .chaos-board {
+        grid-template-columns: 1fr;
+    }
+
+
+    .chaos-result {
+        grid-column: auto;
+    }
+
+
+    .desk-truth {
+        padding: 30px 10px;
+
+        gap: 15px;
+    }
+
+
+    .desk-truth p {
+        font-size: 18px;
+    }
+
+}
+/* =====================================
+   THE AUDIENCE MIRROR
+===================================== */
+
+.audience-mirror {
+    margin-top: 120px;
+}
+
+
+.mirror-heading {
+    max-width: 760px;
+}
+
+
+.mirror-heading h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 50px;
+
+    line-height: 1.08;
+}
+
+
+.mirror-heading h2 em {
+    color: #a54f35;
+}
+
+
+.mirror-heading p {
+    max-width: 600px;
+
+    margin-top: 20px;
+
+    color: #766f67;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   MIRROR ROOM
+===================================== */
+
+.mirror-room {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        130px
+        minmax(0, 1fr);
+
+    min-height: 500px;
+
+    margin-top: 50px;
+
+    border-top: 1px solid #bdb3a7;
+
+    border-bottom: 1px solid #bdb3a7;
+}
+
+
+/* MIRROR SIDES */
+
+.mirror-side {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 50px 35px;
+}
+
+
+.brand-side {
+    text-align: right;
+}
+
+
+.audience-side {
+    text-align: left;
+}
+
+
+.mirror-label {
+    margin-bottom: 15px;
+
+    color: #9a4f38;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+
+/* THOUGHTS */
+
+.thought {
+    padding: 17px 20px;
+
+    background: #e5ded4;
+
+    color: #4f4942;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 15px;
+
+    font-style: italic;
+
+    line-height: 1.5;
+
+    transition: 0.3s ease;
+}
+
+
+.brand-side .thought {
+    border-right: 3px solid #aaa096;
+}
+
+
+.audience-side .thought {
+    border-left: 3px solid #a54f35;
+}
+
+
+.thought:hover {
+    transform: translateY(-4px);
+
+    background: #ebe4da;
+}
+
+
+.person-label {
+    margin-top: 15px;
+
+    color: rgba(33, 31, 28, 0.18);
+
+    font-size: 35px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+}
+
+
+/* =====================================
+   MIRROR GLASS
+===================================== */
+
+.mirror-glass {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.25),
+            rgba(255, 255, 255, 0.6),
+            rgba(255, 255, 255, 0.25)
+        );
+
+    border-left: 1px solid rgba(255, 255, 255, 0.7);
+
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+
+    box-shadow:
+        inset 10px 0 30px rgba(255, 255, 255, 0.3),
+        inset -10px 0 30px rgba(255, 255, 255, 0.3);
+}
+
+
+.mirror-word {
+    color: #a54f35;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 22px;
+
+    font-style: italic;
+
+    line-height: 1.1;
+
+    text-align: center;
+}
+
+
+.mirror-line {
+    width: 1px;
+
+    height: 110px;
+
+    margin: 22px 0;
+
+    background: #bdb3a7;
+}
+
+
+.mirror-glass small {
+    color: #766f67;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+
+/* =====================================
+   MIRROR QUESTION
+===================================== */
+
+.mirror-question {
+    max-width: 700px;
+
+    margin: 55px auto 0;
+
+    text-align: center;
+}
+
+
+.mirror-question > span {
+    color: #a54f35;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.mirror-question h3 {
+    margin: 15px 0;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 31px;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+}
+
+
+.mirror-question h3 em {
+    color: #a54f35;
+}
+
+
+.mirror-question p {
+    color: #766f67;
+
+    font-size: 13px;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 700px) {
+
+    .audience-mirror {
+        margin-top: 85px;
+    }
+
+
+    .mirror-heading h2 {
+        font-size: 37px;
+    }
+
+
+    .mirror-room {
+        grid-template-columns: 1fr;
+
+        border: none;
+    }
+
+
+    .mirror-side {
+        padding: 40px 20px;
+    }
+
+
+    .brand-side,
+    .audience-side {
+        text-align: left;
+    }
+
+
+    .brand-side .thought {
+        border-right: none;
+
+        border-left: 3px solid #aaa096;
+    }
+
+
+    .mirror-glass {
+        min-height: 180px;
+
+        border: none;
+
+        border-top: 1px solid #c9c0b4;
+
+        border-bottom: 1px solid #c9c0b4;
+    }
+
+
+    .mirror-line {
+        width: 80px;
+
+        height: 1px;
+
+        margin: 18px 0;
+    }
+
+
+    .person-label {
+        font-size: 28px;
+    }
+
+
+    .mirror-question h3 {
+        font-size: 25px;
+    }
+
+}
+/* =====================================
+   THE CONTENT MIXER
+===================================== */
+
+.content-mixer {
+    margin-top: 125px;
+}
+
+
+.mixer-heading {
+    max-width: 730px;
+}
+
+
+.mixer-heading h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 52px;
+
+    line-height: 1.05;
+}
+
+
+.mixer-heading h2 em {
+    color: #a54f35;
+}
+
+
+.mixer-heading p {
+    max-width: 600px;
+
+    margin-top: 20px;
+
+    color: #766f67;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   RECIPE SHEET
+===================================== */
+
+.recipe-sheet {
+    position: relative;
+
+    margin-top: 50px;
+
+    padding: 45px;
+
+    background: #f8f4ec;
+
+    border: 1px solid #d3c9bc;
+
+    box-shadow:
+        18px 20px 0 #d8d0c5;
+}
+
+
+.recipe-sheet::before {
+    content: '';
+
+    position: absolute;
+
+    top: 18px;
+    bottom: 18px;
+    left: 18px;
+    right: 18px;
+
+    pointer-events: none;
+
+    border: 1px solid #ded5c9;
+}
+
+
+/* RECIPE HEADER */
+
+.recipe-top {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 30px;
+
+    padding-bottom: 35px;
+
+    border-bottom: 1px solid #cfc5b8;
+}
+
+
+.recipe-top span {
+    color: #9a4f38;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.recipe-top h3 {
+    margin-top: 10px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 34px;
+}
+
+
+.recipe-stamp {
+    width: 95px;
+    height: 95px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 2px solid #a54f35;
+
+    border-radius: 50%;
+
+    color: #a54f35;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    letter-spacing: 1px;
+
+    transform: rotate(8deg);
+}
+
+
+/* =====================================
+   INGREDIENTS
+===================================== */
+
+.ingredient-list {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.ingredient {
+    display: grid;
+
+    grid-template-columns:
+        90px
+        minmax(0, 1fr)
+        180px;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 28px 0;
+
+    border-bottom: 1px dashed #cfc5b8;
+
+    transition: 0.3s ease;
+}
+
+
+.ingredient:hover {
+    padding-left: 15px;
+
+    padding-right: 15px;
+
+    background: #f1ebe2;
+}
+
+
+.ingredient-amount {
+    color: #a54f35;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 31px;
+
+    font-style: italic;
+}
+
+
+.ingredient-name small {
+    color: #9a9288;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.ingredient-name h3 {
+    margin: 5px 0 8px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 23px;
+}
+
+
+.ingredient-name p {
+    max-width: 390px;
+
+    color: #766f67;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+.ingredient-note {
+    color: #9a4f38;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 14px;
+
+    font-style: italic;
+
+    text-align: right;
+}
+
+
+/* =====================================
+   RECIPE RESULT
+===================================== */
+
+.recipe-result {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 35px;
+
+    padding: 28px;
+
+    background: #211f1c;
+
+    color: white;
+}
+
+
+.result-mark {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #a54f35;
+
+    color: white;
+
+    font-size: 20px;
+}
+
+
+.recipe-result small {
+    color: #d8a38f;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+
+.recipe-result h3 {
+    margin-top: 6px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 22px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================
+   CREATIVE NOTE
+===================================== */
+
+.mixer-warning {
+    display: grid;
+
+    grid-template-columns: 150px 1fr;
+
+    gap: 25px;
+
+    margin-top: 35px;
+
+    padding: 25px 0;
+
+    border-top: 1px solid #c9c0b4;
+
+    border-bottom: 1px solid #c9c0b4;
+}
+
+
+.mixer-warning span {
+    color: #a54f35;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.mixer-warning p {
+    color: #625d56;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+.mixer-warning strong {
+    color: #211f1c;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 650px) {
+
+    .content-mixer {
+        margin-top: 90px;
+    }
+
+
+    .mixer-heading h2 {
+        font-size: 38px;
+    }
+
+
+    .recipe-sheet {
+        padding: 35px 28px;
+
+        box-shadow:
+            10px 12px 0 #d8d0c5;
+    }
+
+
+    .recipe-top h3 {
+        font-size: 27px;
+    }
+
+
+    .recipe-stamp {
+        width: 75px;
+
+        height: 75px;
+
+        font-size: 7px;
+    }
+
+
+    .ingredient {
+        grid-template-columns:
+            65px
+            1fr;
+
+        gap: 15px;
+    }
+
+
+    .ingredient-note {
+        grid-column: 2;
+
+        text-align: left;
+    }
+
+
+    .ingredient-amount {
+        font-size: 25px;
+    }
+
+
+    .recipe-result {
+        align-items: flex-start;
+    }
+
+
+    .recipe-result h3 {
+        font-size: 18px;
+    }
+
+
+    .mixer-warning {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+}
+/* =====================================
+   THE HOOK WALL
+===================================== */
+
+.hook-wall-section {
+    margin-top: 125px;
+}
+
+
+.hook-heading {
+    max-width: 750px;
+}
+
+
+.hook-heading h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 52px;
+
+    line-height: 1.05;
+}
+
+
+.hook-heading h2 em {
+    display: block;
+
+    color: #a54f35;
+}
+
+
+.hook-heading p {
+    max-width: 610px;
+
+    margin-top: 20px;
+
+    color: #766f67;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   WRITERS WALL
+===================================== */
+
+.writers-wall {
+    margin-top: 50px;
+
+    background: #d7cdbf;
+
+    border: 12px solid #766757;
+
+    box-shadow:
+        18px 22px 0 rgba(33, 31, 28, 0.12);
+}
+
+
+.wall-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 30px 35px;
+
+    background: #211f1c;
+
+    color: white;
+}
+
+
+.wall-header span {
+    color: #d8a38f;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.wall-header strong {
+    font-family: 'Playfair Display', serif;
+
+    color: #f2eee7;
+
+    font-size: 27px;
+
+    font-style: italic;
+
+    transform: rotate(-2deg);
+}
+
+
+/* =====================================
+   HOOK REWRITES
+===================================== */
+
+.hook-rewrites {
+    padding: 35px;
+}
+
+
+.hook-rewrite {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.8fr)
+        55px
+        minmax(0, 1.2fr);
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 22px;
+}
+
+
+.hook-rewrite:last-child {
+    margin-bottom: 0;
+}
+
+
+.rejected-hook,
+.approved-hook {
+    position: relative;
+
+    min-height: 145px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 25px;
+}
+
+
+.rejected-hook {
+    background: #e9e1d6;
+
+    transform: rotate(-1deg);
+}
+
+
+.approved-hook {
+    background: #f8f4ec;
+
+    box-shadow:
+        0 12px 25px rgba(33, 31, 28, 0.1);
+
+    transform: rotate(1deg);
+}
+
+
+.rejected-hook > span,
+.approved-hook > span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+}
+
+
+.rejected-hook > span {
+    color: #a54f35;
+}
+
+
+.approved-hook > span {
+    color: #65704b;
+}
+
+
+.rejected-hook p,
+.approved-hook p {
+    font-family: 'Playfair Display', serif;
+
+    line-height: 1.45;
+}
+
+
+.rejected-hook p {
+    color: #7a7168;
+
+    font-size: 18px;
+
+    text-decoration: line-through;
+
+    text-decoration-color: #a54f35;
+
+    text-decoration-thickness: 2px;
+}
+
+
+.approved-hook p {
+    color: #211f1c;
+
+    font-size: 19px;
+}
+
+
+.red-mark {
+    position: absolute;
+
+    top: 8px;
+
+    right: 15px;
+
+    color: #a54f35;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 45px;
+
+    transform: rotate(12deg);
+}
+
+
+.rewrite-arrow {
+    color: #a54f35;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 30px;
+
+    text-align: center;
+}
+
+
+/* =====================================
+   HOOK TEST
+===================================== */
+
+.hook-test {
+    padding: 35px;
+
+    background: #f8f4ec;
+
+    border-top: 1px solid #c5baad;
+}
+
+
+.hook-test-title {
+    text-align: center;
+}
+
+
+.hook-test-title span {
+    color: #a54f35;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.hook-test-title h3 {
+    margin-top: 10px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 25px;
+}
+
+
+.hook-questions {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 28px;
+
+    text-align: center;
+}
+
+
+.hook-questions p {
+    color: #625d56;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+.hook-questions strong {
+    color: #a54f35;
+}
+
+
+.hook-questions > span {
+    color: #c5baad;
+}
+
+
+/* =====================================
+   FINAL NOTE
+===================================== */
+
+.hook-final-note {
+    display: grid;
+
+    grid-template-columns: 140px 1fr;
+
+    gap: 30px;
+
+    margin-top: 40px;
+
+    padding: 28px 0;
+
+    border-top: 1px solid #c9c0b4;
+
+    border-bottom: 1px solid #c9c0b4;
+}
+
+
+.hook-final-note > span {
+    color: #a54f35;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.hook-final-note p {
+    color: #625d56;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+.hook-final-note strong {
+    color: #211f1c;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 700px) {
+
+    .hook-wall-section {
+        margin-top: 90px;
+    }
+
+
+    .hook-heading h2 {
+        font-size: 38px;
+    }
+
+
+    .writers-wall {
+        border-width: 8px;
+
+        box-shadow:
+            10px 12px 0 rgba(33, 31, 28, 0.12);
+    }
+
+
+    .wall-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 25px;
+    }
+
+
+    .hook-rewrites {
+        padding: 22px;
+    }
+
+
+    .hook-rewrite {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    .rewrite-arrow {
+        transform: rotate(90deg);
+
+        font-size: 24px;
+    }
+
+
+    .rejected-hook,
+    .approved-hook {
+        min-height: auto;
+    }
+
+
+    .hook-questions {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .hook-questions > span {
+        display: none;
+    }
+
+
+    .hook-final-note {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+}
+/* =====================================
+   THE CONTENT SYSTEM
+===================================== */
+
+.content-system-section {
+    margin-top: 125px;
+}
+
+.system-heading {
+    max-width: 780px;
+}
+
+.system-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    line-height: 1.05;
+}
+
+.system-heading h2 em {
+    color: #a54f35;
+}
+
+.system-heading p {
+    max-width: 620px;
+    margin-top: 20px;
+    color: #766f67;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* SYSTEM MAP */
+
+.system-map {
+    margin-top: 55px;
+    padding: 35px;
+    display: grid;
+    grid-template-columns: 1fr 45px 1fr 45px 1fr 45px 1fr;
+    align-items: stretch;
+    background: #211f1c;
+    color: white;
+    box-shadow: 18px 22px 0 rgba(33, 31, 28, 0.12);
+}
+
+.system-step {
+    padding: 25px 18px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.system-step span {
+    display: block;
+    margin-bottom: 18px;
+    color: #d8a38f;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.system-step p {
+    color: #f2eee7;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+.system-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d8a38f;
+    font-size: 22px;
+}
+
+/* SYSTEM NOTE */
+
+.system-note {
+    margin-top: 45px;
+    padding: 38px;
+    background: #f8f4ec;
+    border: 1px solid #d3c9bc;
+    text-align: center;
+}
+
+.system-note span {
+    color: #a54f35;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.system-note h3 {
+    max-width: 650px;
+    margin: 15px auto;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.system-note p {
+    max-width: 560px;
+    margin: auto;
+    color: #766f67;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* =====================================
+   FINAL CONTENT CTA
+===================================== */
+
+.content-final-cta {
+    margin-top: 100px;
+    padding: 70px 45px;
+    background: #a54f35;
+    color: white;
+    text-align: center;
+    box-shadow: 18px 22px 0 rgba(33, 31, 28, 0.12);
+}
+
+.final-label {
+    display: block;
+    margin-bottom: 18px;
+    color: #f6d6c8;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.content-final-cta h2 {
+    max-width: 720px;
+    margin: auto;
+    font-family: 'Playfair Display', serif;
+    font-size: 43px;
+    line-height: 1.15;
+}
+
+.content-final-cta p {
+    max-width: 600px;
+    margin: 22px auto 0;
+    color: #f8e5dc;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.final-actions {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.final-actions a {
+    padding: 13px 20px;
+    background: #f8f4ec;
+    color: #211f1c;
+    text-decoration: none;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    transition: 0.3s;
+}
+
+.final-actions a:nth-child(2) {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.45);
+}
+
+.final-actions a:hover {
+    transform: translateY(-4px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .system-map {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .system-arrow {
+        transform: rotate(90deg);
+        min-height: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .content-system-section {
+        margin-top: 90px;
+    }
+
+    .system-heading h2 {
+        font-size: 38px;
+    }
+
+    .system-map {
+        padding: 22px;
+        box-shadow: 10px 12px 0 rgba(33, 31, 28, 0.12);
+    }
+
+    .system-note {
+        padding: 30px 20px;
+    }
+
+    .system-note h3 {
+        font-size: 25px;
+    }
+
+    .content-final-cta {
+        padding: 55px 24px;
+        box-shadow: 10px 12px 0 rgba(33, 31, 28, 0.12);
+    }
+
+    .content-final-cta h2 {
+        font-size: 31px;
+    }
+}
