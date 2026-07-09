@@ -3,6 +3,23 @@
 <head>
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6EFMLBT6S"></script>
 <script>
+   
+let lastScroll = 0;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+
+    let currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll) {
+        navbar.style.transform = 'translateY(-100%)';
+    } else {
+        navbar.style.transform = 'translateY(0)';
+    }
+
+    lastScroll = currentScroll;
+
+});
   window.dataLayer = window.dataLayer || [];
 
   function gtag(){
@@ -12,6 +29,37 @@
   gtag('js', new Date());
 
   gtag('config', 'G-Z6EFMLBT6S');
+   
+   const growBtn = document.getElementById('growBtn');
+growBtn.addEventListener('click', () => {
+
+    gtag('event', 'lets_grow_click', {
+        button_name: 'Lets Grow',
+        page_name: 'Home'
+    });
+
+    document.getElementById('contact').scrollIntoView({
+        behavior: 'smooth'
+    });
+
+});
+   const blogLinks = document.querySelectorAll(
+    '.read-post-btn, .editorial-card-content a'
+);
+
+blogLinks.forEach(link => {
+
+    link.addEventListener('click', () => {
+
+        gtag('event', 'blog_click', {
+            blog_title: link.closest('article, .featured-post')
+                ?.querySelector('h3')
+                ?.innerText || 'Blog Post'
+        });
+
+    });
+
+});
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
