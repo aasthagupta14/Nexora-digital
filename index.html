@@ -1,25 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6EFMLBT6S"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6EFMLBT6S"></script>
 <script>
-   
-let lastScroll = 0;
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-
-    let currentScroll = window.pageYOffset;
-
-    if (currentScroll > lastScroll) {
-        navbar.style.transform = 'translateY(-100%)';
-    } else {
-        navbar.style.transform = 'translateY(0)';
-    }
-
-    lastScroll = currentScroll;
-
-});
   window.dataLayer = window.dataLayer || [];
 
   function gtag(){
@@ -29,37 +12,6 @@ window.addEventListener('scroll', () => {
   gtag('js', new Date());
 
   gtag('config', 'G-Z6EFMLBT6S');
-   
-   const growBtn = document.getElementById('growBtn');
-growBtn.addEventListener('click', () => {
-
-    gtag('event', 'lets_grow_click', {
-        button_name: 'Lets Grow',
-        page_name: 'Home'
-    });
-
-    document.getElementById('contact').scrollIntoView({
-        behavior: 'smooth'
-    });
-
-});
-   const blogLinks = document.querySelectorAll(
-    '.read-post-btn, .editorial-card-content a'
-);
-
-blogLinks.forEach(link => {
-
-    link.addEventListener('click', () => {
-
-        gtag('event', 'blog_click', {
-            blog_title: link.closest('article, .featured-post')
-                ?.querySelector('h3')
-                ?.innerText || 'Blog Post'
-        });
-
-    });
-
-});
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,20 +42,25 @@ blogLinks.forEach(link => {
    <a href="#" class="logo">
     <img src="images/logo.png" alt="Nexora Digital">
 </a>
-    <ul>
-        <li><a href="#">Home</a></li>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+    <ul id="primary-menu">
+        <li><a class="active" href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
-<section class="hero">
-    <div class="overlay"></div>
+<section class="hero" id="home">
     <div class="hero-content">
-        <h1>Grow Your Brand Digitally </h1>
-        <p>SEO • Content • Social Media • Ads</p>
-        <a href="#contact" class="hero-btn">Let's Grow</a>
+        <span class="hero-eyebrow">CREATIVE DIGITAL STUDIO</span>
+        <h1>Grow Your<br><span>Brand Digitally</span></h1>
+        <p>Smart strategy, powerful content and data-driven growth for modern brands ready to stand out.</p>
+        <div class="hero-actions">
+            <a href="#contact" class="hero-btn" id="growBtn">Let's Work Together <span>→</span></a>
+        </div>
     </div>
 </section>
 
@@ -150,7 +107,7 @@ blogLinks.forEach(link => {
     </div>
 
     <div class="card">
-        <div class="icon"><img src="images/paidads.webp"</div>
+        <div class="icon"><img src="images/paidads.webp" alt="Paid ads icon"></div>
         <h3>Paid Ads</h3>
         <p>Run high-converting campaigns that generate leads.</p>
     </div>
@@ -356,7 +313,7 @@ blogLinks.forEach(link => {
         </div>
 
         <!-- RIGHT SIDE FORM -->
-        <form class="contact-form" action="https://formspree.io/f/xjgplpyp" method="POST">
+        <form class="contact-form" action="https://formspree.io/f/xyzabcd" method="POST">
 
             <input type="text" name="name" placeholder="Your Name" required>
 
@@ -386,11 +343,40 @@ blogLinks.forEach(link => {
 <script>
 let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
+const menuToggle = document.querySelector('.menu-toggle');
+const primaryMenu = document.getElementById('primary-menu');
+
+menuToggle.addEventListener('click', () => {
+    const isOpen = primaryMenu.classList.toggle('open');
+    menuToggle.classList.toggle('open', isOpen);
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    document.body.classList.toggle('menu-open', isOpen);
+});
+
+primaryMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        primaryMenu.classList.remove('open');
+        menuToggle.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+    });
+});
+
+document.getElementById('growBtn').addEventListener('click', () => {
+    if (typeof gtag === 'function') {
+        gtag('event', 'lets_grow_click', {
+            button_name: 'Lets Work Together',
+            page_name: 'Home'
+        });
+    }
+});
 
 window.addEventListener('scroll', () => {
     let currentScroll = window.pageYOffset;
 
-    if (currentScroll > lastScroll) {
+    navbar.classList.toggle('scrolled', currentScroll > 20);
+
+    if (currentScroll > lastScroll && currentScroll > 120 && !primaryMenu.classList.contains('open')) {
         // scrolling DOWN → hide navbar
         navbar.style.transform = 'translateY(-100%)';
     } else {
@@ -398,7 +384,7 @@ window.addEventListener('scroll', () => {
         navbar.style.transform = 'translateY(0)';
     }
 
-    lastScroll = currentScroll;
+    lastScroll = Math.max(currentScroll, 0);
 });
 </script>
 </body>
