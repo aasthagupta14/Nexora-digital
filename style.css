@@ -2077,3 +2077,29 @@ html {
         ),
         url("images/homepage_image.png") !important;
 }
+@media (max-width: 820px) {
+
+    .hero {
+        background-color: #0b0117 !important;
+
+        background-image:
+            linear-gradient(
+                rgba(11, 1, 23, 0.35),
+                rgba(11, 1, 23, 0.55)
+            ),
+            url("images/homepage_image.png") !important;
+
+        background-size:
+            100% 100%,
+            auto 100% !important;
+
+        background-position:
+            center,
+            72% center !important;
+
+        background-repeat:
+            no-repeat,
+            no-repeat !important;
+    }
+}
+background-position: center, 60% center !important;
